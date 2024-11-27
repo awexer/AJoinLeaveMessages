@@ -1,0 +1,12 @@
+name: AJoinLeaveMessages
+version: '1.0'
+main: com.awexer.aJoinLeaveMessages.AJoinLeaveMessages
+api-version: '1.21'
+commands:
+  ajoinleavemessages:
+    aliases:
+      - "joinmessages"
+      - "leavemessages"
+      - "jleavemessages"
+      - "joinlmessages"
+    description: "Команда плагина AJoinLeaveMessages"

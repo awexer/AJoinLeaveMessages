@@ -1,0 +1,27 @@
+messages:
+  leave_prefix: "&c>"
+  leave:
+    - "%prefix% player %p% has left!"
+    - "%prefix% player %p% disappeared!"
+  join_prefix: "&a>"
+  join:
+    - "%prefix% player %p% has joined!"
+    - "%prefix% player %p% appeared!"
+messages_for_commands:
+  no-perm: "&cУ вас недостаточно прав!"
+  reloaded: "&aКонфиг успешно перезагружен!"
+gui:
+  name: "&4&lLeave/join messages"
+  slots: 54
+  join_icon: "lime_dye"
+  leave_icon: "red_dye"
+  default_icon: "orange_dye"
+  default_name: "&6Default messages"
+  default_lore:
+    - "&6Default messages"
+  join_name: "&aJoin: %message%"
+  leave_name: "&aLeave: %message%"
+  join_lore:
+    - "&aJoin message"
+  leave_lore:
+    - "&CLeave message"
