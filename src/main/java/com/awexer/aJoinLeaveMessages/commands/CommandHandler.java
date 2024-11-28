@@ -24,16 +24,20 @@ public class CommandHandler implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender.hasPermission("ajoinleavemessages.command")) {
-            if (args.length >= 1 && args[0].equalsIgnoreCase("reload")) {
-                AJoinLeaveMessages.getInstance().reloadAll();
-                MessageUtils.message(config.getString("messages_for_commands.reloaded",  "&aКонфиг успешно перезагружен!"), sender);
+            if (args.length >= 1) {
+                if (args[0].equalsIgnoreCase("reload")) {
+                    AJoinLeaveMessages.getInstance().reloadAll();
+                    MessageUtils.message(config.getString("messages_for_commands.reloaded", "&aSuccessfully reloaded config!"), sender);
+                } else {
+                    MessageUtils.message(config.getString("messages_for_commands.bad-args", "&6Invalid usage! try /ajoinleavemessages!"), sender);
+                }
             } else {
                 if (sender instanceof Player senderPlayer) {
                     senderPlayer.openInventory(AJoinLeaveMessages.getInstance().getInitGui().getGui());
                 }
             }
         } else {
-            MessageUtils.message(config.getString("messages_for_commands.no-perm", "&cУ вас недостаточно прав!"), sender);
+            MessageUtils.message(config.getString("messages_for_commands.no-perm", "&cYou can't do it!"), sender);
         }
         return false;
     }

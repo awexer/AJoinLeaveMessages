@@ -8,8 +8,9 @@ messages:
     - "%prefix% player %p% has joined!"
     - "%prefix% player %p% appeared!"
 messages_for_commands:
-  no-perm: "&cУ вас недостаточно прав!"
-  reloaded: "&aКонфиг успешно перезагружен!"
+  no-perm: "&cYou can't do it!"
+  reloaded: "&aSuccessfully reloaded config!"
+  bad-args: "&6Invalid usage! try /ajoinleavemessages!"
 gui:
   name: "&4&lLeave/join messages"
   slots: 54
